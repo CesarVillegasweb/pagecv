@@ -1,0 +1,610 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+@font-face {
+    font-family: "breakdown";
+    src: url(../font/the\ breakdown.ttf);
+}
+
+h1{
+ font-family: "breakdown"; 
+ font-size: 90px; 
+ line-height: 1;
+ color: white;
+ margin: 0 0 10px;
+}
+.text-ini h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+.text-ini h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+.text-ini p{
+    color: white;
+    font-size:  15px;
+    line-height: 1.5;
+    padding: 0 0 15px;
+}
+.text-ini a{
+    display: inline-block;
+    color: white;
+    background: #4d9559;
+    border:  1px solid transparent;
+    padding:  10px 20px;
+    margin: 5px;
+    text-wrap: wrap;
+    line-height: 1.4;
+    font-size:  14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+
+    &:hover{
+      background: transparent;
+      border: 1px solid white;
+      transform: translateX(8px);
+    }
+}
+body{
+    
+}
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+ .logo{
+    height: 5rem;
+    width: 13rem;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .5));;
+    transition: all .2s ease-in-out;
+    
+ }
+ .imglog{
+   
+
+   &:hover{
+      -webkit-transform:scale(1.1);transform:scale(1.1);
+      transform: scaleZ(8px);
+   }
+ }
+ .navlist{
+    display: flex;
+
+ }
+ .navlist a{
+    color: white;
+    
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    text-shadow: 3px 2px 3px #000;
+    transition: all .55s ease ;
+    
+    &:hover{
+        border-bottom: 2px solid white;
+    }
+ }
+ #menu-icon{
+    color: white;
+    font-size: 30px;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+ }
+ hr{
+   visibility: hidden;
+ }
+ .cesar{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: url(../imagenes/GPTempDownload.JPG);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    
+    align-items: center;
+    gap: 6rem;
+ }
+ .card{
+   
+   height: 20rem;
+   width: 25rem;
+   border-bottom: 0;
+   overflow: hidden;
+   border-radius: 10px;
+   &:hover{
+      box-shadow: 5px 6px 70px 10px rgba(234, 63, 60, 0.288);
+   }
+ }
+ .card:hover img{
+   
+   transform: scale(1.1) rotate(-3deg);
+      
+ }
+ .newalbum h3{
+    
+    height: auto;
+    width: 100%;
+    color: white;
+    text-shadow: 3px 2px 3px #000;
+      
+ }
+ .newalbum h4{
+    
+    font-size: 18px;
+    padding: 0px;
+    color: white;
+    margin: 0 15px;
+    top:  10px;
+   
+ }
+ .newalbum img{
+    display: block;
+    height: 20rem;
+    width: 25rem;
+    border-bottom: 0;
+    border-radius: 10px;
+    box-shadow: 2px 3px 2px #000;
+    transition: all .5s ease;
+
+ }
+ .album{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background: rgba(209, 92, 92, 0.6);
+    width: 25rem;
+    height: 40px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin:0;
+    padding: 0;
+    
+ }
+ main{
+   display: block;
+   flex-wrap: nowrap;
+ }
+ section{
+   display: flex;
+   flex: 1 1 auto;
+    padding: 0 19%;
+    
+ }
+ .ctaa i{
+    vertical-align: middle;
+    margin-right: 5px;
+
+ }
+ .icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+ }
+ .icons i{
+    display: block;
+    margin:  26px 0;
+    font-size:  24px;
+    color: white;
+    transition: all .55s ease;
+
+    &:hover{
+        color: #4d9559;
+        transform: translateY(-5px);
+
+    }
+ }
+ .icons-footer{
+   display: none;
+ }
+ .scroll{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+ }
+ 
+ .scroll i{
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: rgba(0,0,0,.5);
+    border-radius: 30px;
+    transition: all .50s ease;
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+ }
+ /* @media (max-width: 1535){
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .scroll{
+        right: 3%;
+        transition: .2s;
+    }
+ }
+*/  /*  @media (max-width: 1460){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+ }  */
+ @media(max-width: 1340px){
+    .newalbum img{
+      display: block;
+      flex: 0 1 auto;
+      width: 25rem;
+      height: 20rem;
+      }
+      
+      .newalbum .album{
+         display: flex;
+         flex: 0 3 auto; 
+         width: 25rem;
+         height: auto;
+       }
+    .text-ini h1{
+      font-size: 75px;
+      margin: 0 0 30px;
+    }
+    .text-ini h5{
+      margin-bottom: 25px;
+    }
+ }
+ @media(max-width: 900px){
+   section{
+      padding: 0 12%;
+      transition: .2s;
+   } 
+   .text-ini{
+      padding-top: 115px;
+      transition: .2s;
+    }
+    .card{
+      width: 560px;
+      height: auto;
+    }
+   .newalbum{
+      align-items: center;
+   }
+    .newalbum img{
+      width: 560px;
+      height: auto;
+    }
+    .newalbum .album{
+      width: 560px;
+      height: auto;
+    }
+    .cesar{
+      flex: 1 1 auto;
+      height: 100%;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+   }
+   .icons{
+      /* display: none; */
+      padding: 0 5%;
+   }
+   .scroll{
+      display: none;
+   }
+   
+ }
+ @media(max-width: 863px){
+   #menu-icon{
+      display: block;
+      text-shadow: 3px 2px 3px #000;
+   }
+  
+   .bx{
+      background: rgba(0, 0, 0, .3);
+      border-radius: 50%;
+      
+   }
+   .text-ini{
+      display: flex;
+      flex-direction: column;
+   }
+   .text-ini p{
+      text-align: center;
+      margin-right: 50px;
+      text-shadow: 3px 2px 3px #000;
+   }
+   .text-ini h5{
+      text-align: center;
+      line-height: 2;
+      margin-bottom: 0;
+      text-shadow: 3px 2px 3px #000;
+   }
+   .text-ini h4{
+      text-align: center;
+      text-shadow: 3px 2px 3px #000;
+   }
+   .text-ini h1{
+      text-align: center;
+      text-shadow: 3px 2px 3px #000;
+   }
+   .text-ini a{
+      align-self: center;
+            
+   }
+   .newalbum{
+      display: flex;
+      flex-direction: column;        
+   }
+   .newalbum img{
+      align-self: center;
+   }
+   .album{
+      align-self: center;
+   }
+   .newalbum h3{
+      text-align: center;
+   }
+   
+   .navlist{
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      width: 250px;
+      height: 30vh;
+      border-bottom-left-radius: 5%;
+      background: rgba(81, 179, 101, 0.74);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 25px 5px;
+      transition: all .55s ease;
+   }
+   .navlist a{
+      margin-left: 0;
+      display: block;
+     text-align: center;
+      margin: 7px 0;
+      width: 200px;
+      
+      
+   }
+   .navlist.open{
+      right: 0;
+    
+   }
+   hr{
+       visibility: visible;
+       border-radius: 50%;
+   }
+ }
+ @media(max-width: 736px){
+   .icons {
+      display: none;
+   }
+   header{
+      padding: 33px 15px;
+      margin-left: 2px;
+   }
+   section{
+      display: flex;
+      flex: 1 1 auto;
+      padding: 0 50px;
+   }
+   .newalbum{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   
+   .newalbum img{
+    /*   display: flex;
+      flex: 1 1 auto; */
+     /*  margin-top: 10px; */
+      width: 460px; 
+      margin: 0 0 0 50px;     
+      align-items: center;      
+      transition: all .2s ease;
+      }
+ 
+   .newalbum .album{
+      width: 460px;
+   }
+   .imglog{
+      width: 100px;
+      
+      
+   }
+   .logo{
+      width: 100px;
+      height: auto;
+
+   }
+   .album{
+      margin-bottom: 5px;
+   }
+   .icons-footer{
+      background: #0a86a8;
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      flex-direction: row;
+      
+      width: 100%;
+
+   }
+   .icons-footer a{
+      flex-direction: row;
+      display: block;
+      margin:  0 0;
+      font-size:  24px;
+      color: white;
+   }
+   footer{
+      background: transparent;
+      
+   }
+ }
+ @media(max-width: 664px){
+ section{
+   width: auto;
+   
+   padding: 0 50px 0;
+}
+}
+.text-ini p{
+   
+   margin-right: 0px;
+   
+}
+@media(max-width: 659px){
+   section{
+         
+     padding: 0 50px 0;
+  }
+ }
+ @media(max-width: 619px){
+   section{
+      padding: 30px;
+  }
+ }
+ @media(max-width: 590px){
+   
+   .cesar{
+      
+      padding: 0 10px;
+   }
+   .newalbum{
+      display: flex;
+      
+   }
+   .card{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }  
+   .newalbum img{
+      align-items: center;
+      margin-top: 10px;
+      margin-left: 0;
+      width: 360px;
+      height: auto;
+      transition: all .2s ease;
+      }
+   .newalbum .album{
+      width: 360px;
+      height: auto;
+   }
+ }
+
+ @media(max-width: 570px){
+   .cesar{
+      padding: 0 10px;
+      
+      
+   }
+   .text-ini{
+      padding: 90px;
+   }
+ }
+ @media(max-width: 561px){
+   .cesar{
+      display: block;
+      padding: 0 50px;
+      margin: 0;
+   }
+   .navlist{
+      margin-left: 0;
+   }
+   header{
+      margin-right: 10px;
+   }
+   .text-ini{
+      align-items: center;
+      margin: 0;
+   }
+ 
+   .newalbum img{
+      
+      margin-top: 10px;
+      width: 260px;
+      height: auto;
+      transition: all .2s ease;
+      }
+      .newalbum .album{
+         width: 260px;
+         height: auto;
+      }
+ }
+ @media(max-width: 532px){
+   header{
+      margin: 0;
+      padding: 33px 40px;
+     }
+   .cesar{
+      
+      padding: 20px 0;
+      margin: 0;
+   }
+   .text-ini{
+      padding: 40px;
+   }
+   .card{
+      display: grid;
+      width: 100%;
+   }
+  
+ 
+ }
+ @media(max-width: 407px){
+   header{
+      padding: 33px 10px;
+   }
+   .cesar{
+      padding: 30px 0px;
+   }
+   .newalbum img{
+      display: flex;
+      flex: 1 1 auto;
+      margin-top: 10px;
+      width: 260px;
+      height: auto;
+      transition: all .2s ease;
+      }
+      .newalbum .album{
+         width: 260px;
+         height: auto;
+      }
+ }
+
+
+ 
